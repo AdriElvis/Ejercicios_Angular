@@ -1,1 +1,18 @@
-<p>formulario-compra works!</p>
+<h1>Bicicleta</h1>
+
+<p>Correo: <input type="text" [(ngModel)]="correo"></p>
+<p>Direccion: <textarea rows="4" cols="50" placeholder="Escriba su dirección" [(ngModel)]="direccion"></textarea></p>
+<p>Teléfono: <input type="text" [(ngModel)]="telefono"></p>
+<p>Comunidad: <select [(ngModel)]="comunidad">
+    <option value="madrid">Madrid</option>
+    <option value="valencia">Valencia</option>
+    <option value="galicia">Galicia</option>
+</select></p>
+<p>Forma de pago:<br>
+Efectivo<input type="radio" name="forma" value="efectivo" [(ngModel)]="pago"><br>
+Tarjeta: <input type="radio" name="forma" value="tarjeta" [(ngModel)]="pago"><br>
+Contra-reembolso: <input type="radio" name="forma" value="contra-reembolso" [(ngModel)]="pago"></p>
+<input type="checkbox" [(ngModel)]="acepta"> Acepta recibir información de nuestros productos
+<p><button (click)="mostrar()"><h3>Enviar</h3></button></p>
+<h1>Información</h1>
+<p style="white-space: pre-line">{{info}}</p>
