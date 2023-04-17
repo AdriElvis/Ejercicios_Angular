@@ -1,0 +1,11 @@
+<h1>ENUMERADOS</h1>
+<p>Nombre: <input type="text" [(ngModel)]="instancia.nombre"></p>
+<p>DNI: <input type="text" [(ngModel)]="instancia.dni"></p>
+<p>Videojuego: <select [(ngModel)]="instancia.videojuego">
+    <option value="mario">Mario</option>
+    <option value="spy">Spy</option>
+    <option value="kings">Kings</option>
+    <option value="pacmanpro">PacmanPro</option>
+</select></p>
+<p><button (click)="mostrar()"><h3>Ver datos</h3></button></p>
+<p style="white-space: pre-line">{{info}}</p>
