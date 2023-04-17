@@ -1,0 +1,14 @@
+<h1>UNIÓN Y DIRECTIVAS</h1>
+<p>Utilizaremos un formulario para implementar estos dos conceptos</p>
+<p>Nombre: <input type="text" [(ngModel)]="instancia.nombre"></p>
+<p>Tipo de cliente: <select [(ngModel)]="instancia.cliente">
+    <option value="premium">Premium</option>
+    <option value="normal">Normal</option>
+</select></p>
+<p>DNI: <input type="text" [(ngModel)]="instancia.dni"></p>
+<p>Videojuego: <select [(ngModel)]="instancia.videojuego">
+    <option *ngFor="let juego of juegos" [ngValue]="juego">{{juego}}</option>
+</select></p>
+<p><button (click)="generarFactura();mostrar()"><h3>Crear factura</h3></button></p>
+<h1 *ngIf="crear">Información</h1>
+<p>{{info}}</p>
