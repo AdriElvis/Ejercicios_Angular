@@ -1,0 +1,14 @@
+<h1>Calculo de divisas</h1>
+
+<p>Cantidad a convertir en € <input type="number" [(ngModel)]="cantidad"></p>
+
+<p>
+    <select [(ngModel)]="moneda">
+        <option value="libra">Libra esterlina</option>
+        <option value="dolar">Dólar estadounidense</option>
+        <option value="peso">Peso argentino</option>
+    </select>
+</p>
+
+<button (click)="convertir()">Realizar conversión</button>
+

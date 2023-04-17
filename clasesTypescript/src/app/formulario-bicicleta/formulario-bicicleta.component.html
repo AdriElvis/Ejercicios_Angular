@@ -1,0 +1,14 @@
+<h1>Bicicleta</h1>
+
+<p>Color: <input type="text" [(ngModel)]="bicicleta.color"></p>
+<p>Marca: <input type="text" [(ngModel)]="bicicleta.marca"></p>
+<p>Piñones: <input type="number" [(ngModel)]="bicicleta.pinones"></p>
+<p>Platos: <input type="number" [(ngModel)]="bicicleta.platos"></p>
+<p>Electrica: <input type="checkbox" [(ngModel)]="bicicleta.electrica"></p>
+<p>Cambio de velocidad: <input type="number" [(ngModel)]="numero"></p>
+<p><button (click)="bicicleta.acelerar(numero)">Acelerar</button></p>
+<p><button (click)="bicicleta.frenar(numero)">Frenar</button></p>
+<p><button (click)="mostrar()"><h3>Crear</h3></button></p>
+
+<h1>Información</h1>
+<p>{{info}}</p>
