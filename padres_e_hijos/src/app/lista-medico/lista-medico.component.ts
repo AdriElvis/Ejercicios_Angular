@@ -10,6 +10,7 @@ import { Medico } from '../_modelo/medico';
 export class ListaMedicoComponent {
   @Input() medicos2:Medico
   medicosLista:Medico[]=[]
+  hayMedicos:boolean=false
 
   constructor(){
     this.medicos2=new Medico("","",0,"")
@@ -17,5 +18,6 @@ export class ListaMedicoComponent {
 
   anadir(){
     this.medicosLista.push(new Medico(this.medicos2.nombre,this.medicos2.apellidos,this.medicos2.cedula,this.medicos2.foto))
+    this.hayMedicos=true
   }
 }

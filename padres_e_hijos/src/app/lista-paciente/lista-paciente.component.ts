@@ -9,8 +9,10 @@ import { Paciente } from '../_modelo/paciente';
 export class ListaPacienteComponent {
 
   pacientesLista:Paciente[]=[]
+  hayPacientes:boolean=false
 
   anadir(paciente:Paciente){
     this.pacientesLista.push(new Paciente(paciente.nombre,paciente.apellidos))
+    this.hayPacientes=true
   }
 }
