@@ -1,0 +1,16 @@
+<app-form-pedidos-hijo (pedidoEnviado)="anadir($event)"></app-form-pedidos-hijo>
+<table>
+    <caption>Listado de pacientes</caption>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+    </tr>
+    <tr *ngFor="let pedido of pedidosLista">
+        <td>{{pedido.idPedido}}</td>
+        <td>{{pedido.nombreCliente}}</td>
+        <td>{{pedido.nombreCliente}}</td>
+        <td>{{pedido.totalProductos}}</td>
+        <td>{{pedido.importeTotal}}</td>
+    </tr>
+</table>

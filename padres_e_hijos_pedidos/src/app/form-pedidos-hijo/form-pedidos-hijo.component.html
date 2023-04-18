@@ -1,0 +1,8 @@
+<div class="container">
+    <h1 class="text-center">pedido</h1>
+    <p>ID Cliente: <input type="number" [(ngModel)]="pedido.idCliente"></p>
+    <p>Nombre del cliente: <input type="text" [(ngModel)]="pedido.nombreCliente"></p>
+    <p>Total pedidos: <input type="number" [(ngModel)]="pedido.totalProductos"></p>
+    <p>Importe total: <input type="number" [(ngModel)]="pedido.importeTotal"></p>
+    <p><button (click)="enviarPedidos()">Aceptar</button></p>
+</div>
