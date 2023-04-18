@@ -1,16 +1,24 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
 <app-form-pedidos-hijo (pedidoEnviado)="anadir($event)"></app-form-pedidos-hijo>
-<table>
-    <caption>Listado de pacientes</caption>
-    <tr>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-    </tr>
-    <tr *ngFor="let pedido of pedidosLista">
-        <td>{{pedido.idPedido}}</td>
-        <td>{{pedido.nombreCliente}}</td>
-        <td>{{pedido.nombreCliente}}</td>
-        <td>{{pedido.totalProductos}}</td>
-        <td>{{pedido.importeTotal}}</td>
-    </tr>
-</table>
+<div class="container">
+    <table class="table">
+        <thead class="thead-light text-center">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Total productos</th>
+                <th scope="col">Importe total</th>
+            </tr>
+        </thead>
+
+        <tr class="text-center" *ngFor="let pedido of pedidosLista">
+            <td>{{pedido.idPedido}}</td>
+            <td>{{pedido.nombreCliente}}</td>
+            <td>{{pedido.totalProductos}}</td>
+            <td>{{pedido.importeTotal}}</td>
+        </tr>
+    </table>
+</div>
