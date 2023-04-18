@@ -8,7 +8,7 @@
     <p>
         Tipo:
         <select [(ngModel)]="producto.tipo">
-            <option *ngFor="let tipo of tipos" [ngValue]="tipo">{{tipo}}</option>
+            <option *ngFor="let tipo of tipos" [ngValue]="tipo" [value]="producto">{{tipo}}</option>
         </select>
     </p>
     <p><button class="btn-primary" (click)="anadir()">Agregar producto</button></p>
