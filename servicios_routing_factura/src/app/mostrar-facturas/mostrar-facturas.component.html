@@ -1,10 +1,24 @@
 <h1>Factura</h1>
-<p>ID Cliente: <input type="number" [(ngModel)]="factura.idCliente"></p>
-<p>Total factura: <input type="number" [(ngModel)]="factura.totalFactura"></p>
-<p>IVA: <input type="number" [(ngModel)]="factura.iva"></p>
-<p><button (click)="listaServicio.alta(factura.idCliente,factura.totalFactura,factura.iva)">Alta</button></p>
-<p><button (click)="listaServicio.baja(factura.idCliente)">Baja</button></p>
-<p><button (click)="listaServicio.modificar(factura.idFactura,factura.idCliente,factura.totalFactura,factura.iva)">Modificar</button></p>
+<p><button (click)="alta()">Alta</button>
+<button (click)="baja()">Baja</button>
+<button (click)="_modificar()">Modificar</button></p>
+<div *ngIf="darAlta">
+    <p>ID Cliente: <input type="number" [(ngModel)]="factura.idCliente"></p>
+    <p>Total factura: <input type="number" [(ngModel)]="factura.totalFactura"></p>
+    <p>IVA: <input type="number" [(ngModel)]="factura.iva"></p>
+    <p><button (click)="listaServicio.alta(factura.idCliente,factura.totalFactura,factura.iva)">Alta</button></p>
+</div>
+<div *ngIf="darBaja">
+    <p>ID Factura: <input type="number" [(ngModel)]="factura.idFactura"></p>
+    <p><button (click)="confirmarBaja()">Baja</button></p>
+</div>
+<div *ngIf="modificar">
+    <p>ID Factura: <input type="number" [(ngModel)]="factura.idFactura"></p>
+    <p>ID Cliente: <input type="number" [(ngModel)]="factura.idCliente"></p>
+    <p>Total factura: <input type="number" [(ngModel)]="factura.totalFactura"></p>
+    <p>IVA: <input type="number" [(ngModel)]="factura.iva"></p>
+    <p><button (click)="listaServicio.modificar(factura.idFactura,factura.idCliente,factura.totalFactura,factura.iva)">Modificar</button></p>
+</div>
 <div class="container">
     <table class="table">
         <thead class="thead-light text-center">

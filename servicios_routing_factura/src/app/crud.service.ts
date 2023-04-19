@@ -15,10 +15,10 @@ export class CrudService {
   }
 
   baja(id:number){
-    var indice = this.lista.findIndex(factura => factura.idCliente===id )
+    var indice = this.lista.findIndex(factura => factura.idFactura===id )
     
     if(indice>=0){
-      this.lista.splice(indice)
+      this.lista.splice(indice,1)
     }
   }
 
