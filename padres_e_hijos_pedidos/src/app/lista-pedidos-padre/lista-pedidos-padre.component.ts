@@ -10,7 +10,7 @@ import { Pedido } from '../_modelo/pedido';
 export class ListaPedidosPadreComponent {
   pedidosLista:Pedido[]=[]
 
-  anadir(pedidos:any){
+  anadir(pedidos:Pedido[]){
     this.pedidosLista=pedidos
   }
 }
