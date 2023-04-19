@@ -1,0 +1,26 @@
+<h1>Factura</h1>
+<p>ID Cliente: <input type="number" [(ngModel)]="factura.idCliente"></p>
+<p>Total factura: <input type="number" [(ngModel)]="factura.totalFactura"></p>
+<p>IVA: <input type="number" [(ngModel)]="factura.iva"></p>
+<p><button (click)="listaServicio.alta(factura.idCliente,factura.totalFactura,factura.iva)">Alta</button></p>
+<p><button (click)="listaServicio.baja(factura.idCliente)">Baja</button></p>
+<p><button (click)="listaServicio.modificar(factura.idFactura,factura.idCliente,factura.totalFactura,factura.iva)">Modificar</button></p>
+<div class="container">
+    <table class="table">
+        <thead class="thead-light text-center">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Total productos</th>
+                <th scope="col">Importe total</th>
+            </tr>
+        </thead>
+
+        <tr class="text-center" *ngFor="let lista of listaServicio.consultar()">
+            <td>{{lista.idFactura}}</td>
+            <td>{{lista.idCliente}}</td>
+            <td>{{lista.totalFactura}}</td>
+            <td>{{lista.iva}}</td>
+        </tr>
+    </table>
+</div>
