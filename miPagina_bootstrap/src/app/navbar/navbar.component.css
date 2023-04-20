@@ -1,0 +1,10 @@
+#logotipo
+{
+    filter:brightness();
+    mix-blend-mode:multiply;
+    width:5vw;
+}
+.navbar
+{
+    background-color:rgb(0, 0, 0);
+}
