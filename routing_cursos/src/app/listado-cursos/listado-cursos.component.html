@@ -1,0 +1,21 @@
+<h1>CURSOS</h1>
+<div class="container">
+    <table class="table">
+        <thead class="thead-light text-center">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Duración</th>
+                <th scope="col">Nivel</th>
+            </tr>
+        </thead>
+
+        <tr class="text-center" *ngFor="let lista of listaCursos.leer()">
+            <td>{{lista.idCurso}}</td>
+            <td>{{lista.nombre}}</td>
+            <td>{{lista.duracion}}</td>
+            <td>{{lista.nivel}}</td>
+            <td><button (click)="enviar(lista.idCurso)">Modificar</button></td>
+        </tr>
+    </table>
+</div>

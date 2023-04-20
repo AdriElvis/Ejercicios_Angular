@@ -1,0 +1,11 @@
+<h1>Modificación del curso cuyo id es {{id}}</h1>
+<p>Nombre: <input type="text" [(ngModel)]="curso.nombre"></p>
+<p>Duración: <input type="number" [(ngModel)]="curso.duracion"></p>
+<p>Niveles: 
+    <select [(ngModel)]="curso.nivel">
+        <option *ngFor="let nivel of niveles" [value]="nivel">{{nivel}}</option>
+    </select>
+</p>
+<button (click)="listaCursos.modificar(id,curso.nombre,curso.duracion,curso.nivel)">Modificar</button>
+<p>{{id}}{{curso.nombre}}{{curso.duracion}}{{curso.nivel}}</p>
+<button (click)="volver()">Voler a cursos</button>
