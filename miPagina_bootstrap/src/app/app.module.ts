@@ -8,6 +8,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormContactoComponent } from './form-contacto/form-contacto.component';
 import { FormsModule } from '@angular/forms';
+import { BlogComponent } from './blog/blog.component';
+import { Articulo1Component } from './articulo1/articulo1.component';
+import { Articulo2Component } from './articulo2/articulo2.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { FormsModule } from '@angular/forms';
     InicioComponent,
     NavbarComponent,
     FooterComponent,
-    FormContactoComponent
+    FormContactoComponent,
+    BlogComponent,
+    Articulo1Component,
+    Articulo2Component
   ],
   imports: [
     BrowserModule,

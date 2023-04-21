@@ -2,3 +2,27 @@
 {
     height:90vh;
 }
+.habilidades
+{
+    background-color: rgb(1, 10, 48);
+    max-width: 100%;
+    margin-right:0;
+    margin-left:0;
+    padding:5%;
+    /* height:78vh; */
+}
+.accordion-body,.list-group,.list-group-item
+{
+    background-color: rgb(123, 172, 232);
+    color:black;
+}
+.accordion-button
+{
+    background-color: rgb(7, 49, 101);
+    color:white;
+    border-radius: 50px;
+}
+.accordion-button:focus
+{
+    box-shadow: none;
+}
