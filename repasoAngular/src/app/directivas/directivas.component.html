@@ -1,0 +1,23 @@
+<h1>Directivas</h1>
+<p>Número 1: <input type="number" [(ngModel)]="numero1"></p>
+<p>Número 2: <input type="number" [(ngModel)]="numero2"></p>
+
+<p>Seleccione la operación
+    <select [(ngModel)]="eleccion">
+        <option *ngFor="let operacion of operaciones" [ngValue]="operacion" [value]="operacion">{{operacion}}</option>
+    </select>
+</p>
+
+<p>Resultado:
+    <span [ngSwitch]="eleccion">
+      <span *ngSwitchCase="'sumar'">{{numero1+numero2}}</span>
+      <span *ngSwitchCase="'restar'">{{numero1-numero2}}</span>
+      <span *ngSwitchCase="'multiplicar'">{{numero1*numero2}}</span>
+      <span *ngSwitchDefault>(No eligió operación)</span>
+    </span>
+  </p>
+
+<p><button (click)="haceCLick()">Haz click</button></p>
+
+<p *ngIf="clickea">{{mensaje}}</p>
+
