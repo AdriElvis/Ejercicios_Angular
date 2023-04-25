@@ -18,14 +18,17 @@ export class ModificacionCursosComponent {
   recibo:boolean=false
 
   constructor(public listaCursos:CrudCursosService,private route:ActivatedRoute, private router: Router){
-    this.id=this.route.snapshot.queryParams["id"]
-    this.nombre=this.route.snapshot.queryParams["nombre"]
-    this.duracion=this.route.snapshot.queryParams["duracion"]
-    this.nivel=this.route.snapshot.queryParams["nivel"]
-
+    // this.id=this.route.snapshot.queryParams["id"]
+    // this.nombre=this.route.snapshot.queryParams["nombre"]
+    // this.duracion=this.route.snapshot.queryParams["duracion"]
+    // this.nivel=this.route.snapshot.queryParams["nivel"]
     if(this.id!=null){
       this.recibo=true
     }
+  }
+
+  ngOnInit(){
+    this.route.queryParams.subscribe(data => {this.id = data['id'];this.nombre = data['nombre'];this.duracion = data['duracion'];this.nivel = data['nivel']})
   }
 
   volver(){
