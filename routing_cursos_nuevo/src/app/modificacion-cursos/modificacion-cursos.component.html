@@ -1,0 +1,21 @@
+<div *ngIf="!recibo">
+    <h1>Alta</h1>
+</div>
+<div *ngIf="recibo">
+    <h1>Modificar</h1>
+    <p>Id Curso: <input type="number" [(ngModel)]="id" placeholder="{{id}}"></p>
+</div>
+<p>Nombre: <input type="text" [(ngModel)]="nombre" placeholder="{{nombre}}"></p>
+<p>Duración: <input type="number" [(ngModel)]="duracion" placeholder="{{duracion}}"></p>
+<p>Niveles: 
+    <select [(ngModel)]="nivel">
+        <option *ngFor="let nivel of niveles" [value]="nivel">{{nivel}}</option>
+    </select>
+</p>
+<div *ngIf="!recibo">
+    <p><button (click)="listaCursos.alta(nombre,duracion,nivel)">Alta</button></p>
+</div>
+<div *ngIf="recibo">
+    <p><button (click)="listaCursos.modificar(id,nombre,duracion,nivel)">Modificar</button></p>
+</div>
+<button (click)="volver()">Voler a cursos</button>
