@@ -1,0 +1,21 @@
+<h1>Formulario de Alumno</h1>
+
+<form #nombre_apodo=ngForm [formGroup]="formu" (ngSubmit)="enviar()">
+   <div *ngIf="encontrar==1">
+      <p>ID: <input type="number" formControlName="id"></p>
+   </div>
+   
+   <div *ngIf="encontrar==0">
+      <p>ID: <input type="number" disabled [placeholder]="id"></p>
+      <p>DNI: <input type="text" formControlName="dni" [placeholder]="dni"></p>
+      <p>Nombre: <input type="text" formControlName="nombre" [placeholder]="nombre"></p>  
+      <p>Horas de formación: <input type="number" formControlName="horas" [placeholder]="horas"></p>
+   </div>
+   <div *ngIf="encontrar==2">
+      <p>DNI: <input type="text" formControlName="dni"></p>
+      <p>Nombre: <input type="text" formControlName="nombre"></p>  
+      <p>Horas de formación: <input type="number" formControlName="horas"></p>
+   </div>
+   <button>Enviar</button>  
+</form>
+<p>{{mensaje}}</p>

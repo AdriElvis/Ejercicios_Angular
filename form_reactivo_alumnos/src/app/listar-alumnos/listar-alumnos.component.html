@@ -1,0 +1,13 @@
+<h1>Listado de alumnos</h1>
+<table>
+    <tr *ngFor="let alumno of alumnos">
+        <td>{{alumno.id}}</td>
+        <td>{{alumno.dni}}</td>
+        <td>{{alumno.nombre}}</td>
+        <td>{{alumno.horas}}</td>
+        <td><button routerLink="modificar" [queryParams]="{encontrar:0,id:alumno.id,dni:alumno.dni,nombre:alumno.nombre,horas:alumno.horas}">Modificar</button></td>
+    </tr>
+</table>
+<p> <button (click)="encontrar()">Buscar por ID</button></p>
+<p> <button (click)="alta()">Alta</button></p>
+<router-outlet></router-outlet>
