@@ -1,0 +1,11 @@
+<h1>Pedido</h1>
+<form #nombre_apodo=ngForm [formGroup]="formu" (ngSubmit)="enviar()">
+    <div *ngIf="finalizar==0">
+        <p>Forma de pago: <input type="text" formControlName="forma"></p>
+        <p>Dirección: <input type="text" formControlName="direccion"></p>
+        <button>Agregar Pedido</button>
+    </div>
+    <div *ngIf="finalizar>0">
+        <button>Finalizar pedido</button>
+    </div>
+</form>

@@ -1,0 +1,9 @@
+<h1>Pedido {{idPedido}}</h1>
+<form #nombre_apodo=ngForm [formGroup]="formu" (ngSubmit)="aniadir()">
+    <p>ID producto: <input type="number" formControlName="idProducto" value=""></p>
+    <p>Cantidad: <input type="number" formControlName="cantidad" value=""></p>
+    <button>Agregar producto</button>
+    <div *ngIf="productos>0">
+        <button (click)="volver()">Finalizar pedido</button>
+    </div>
+</form>
