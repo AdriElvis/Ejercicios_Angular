@@ -6,8 +6,6 @@ DetallePedido
   providedIn: 'root'
 })
 export class ServicioPedidosService {
-  static aux=0
-  idAux:number=0
   pedidos:Pedido[]=[]
   detalle:DetallePedido[]=[]
   productos:DetallePedido[]=[]
@@ -24,16 +22,10 @@ export class ServicioPedidosService {
         this.productos[i].idPedido=pedido.idPedido
       }
     }
-
     this.detalle=this.productos
-    
-    console.log(this.pedidos)
-    console.log(this.detalle)
-
   }
 
   altaAuxiliar(idProducto:number,cantidad:number){
     this.productos.push(new DetallePedido(null,idProducto,cantidad))
-
   }
 }
