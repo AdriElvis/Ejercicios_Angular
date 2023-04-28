@@ -27,9 +27,15 @@ export class AgregarDetallesComponent {
   }
 
   aniadir(){
-    this.servicio.altaAuxiliar(this.formu.value.idProducto,this.formu.value.cantidad)
-    this.productos++
-    alert("Producto añadido")
+    if((this.formu.value.idProducto==null && this.formu.value.cantidad==null) ||(this.formu.value.cantidad==0 && this.formu.value.idProducto==0)){
+      alert("Complete todos los campos")
+    }
+    else{
+      this.servicio.altaAuxiliar(this.formu.value.idProducto,this.formu.value.cantidad)
+      this.productos++
+      alert("Producto añadido")
+    }
+
   }
 
   volver(){

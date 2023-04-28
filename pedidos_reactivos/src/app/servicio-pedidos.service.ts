@@ -17,12 +17,13 @@ export class ServicioPedidosService {
     this.pedidos.push(pedido)
 
     for (let i = 0; i < this.productos.length; i++) {
-      
       if(this.productos[i].idPedido==null){
         this.productos[i].idPedido=pedido.idPedido
       }
     }
     this.detalle=this.productos
+    console.log(this.detalle)
+    console.log(this.productos)
   }
 
   altaAuxiliar(idProducto:number,cantidad:number){

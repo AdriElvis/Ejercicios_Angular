@@ -31,7 +31,14 @@ export class AgregarPedidoComponent {
 
   enviar(){
     if(this.finalizar==0){
-      this.llevar.navigate(['detalles'],{queryParams:{forma:this.formu.value.forma,direccion:this.formu.value.direccion}})
+      if(this.formu.value.forma==null || this.formu.value.forma=="" || this.formu.value.direccion==null || this.formu.value.direccion==""){
+        alert("Complete todos los campos")
+      }
+      else{
+        this.llevar.navigate(['detalles'],{queryParams:{forma:this.formu.value.forma,direccion:this.formu.value.direccion}})
+        
+      }
+      
     }
     else{
       this.servicio.altaDefinitiva(this.forma,this.direccion)
