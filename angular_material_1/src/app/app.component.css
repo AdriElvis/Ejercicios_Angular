@@ -1,0 +1,11 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .contenido {
+    padding: 20px;
+    height:88vh;
+  }
+
+.mat-mdc-list-base{
+  --mdc-list-list-item-leading-icon-color: rgb(0 0 0);
+} 

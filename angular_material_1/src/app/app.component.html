@@ -1,0 +1,32 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button type="button" mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h2>My App</h2>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side">
+    <!-- <mat-nav-list *ngFor="let lista of menu.mostrar()">
+      <a mat-list-item [routerLink]="lista.ruta"><mat-icon>{{lista.icono}}</mat-icon> {{lista.nombre}}</a>
+    </mat-nav-list> -->
+
+    <mat-nav-list>
+      <mat-list-item *ngFor="let lista of menu.mostrar()" [routerLink]="lista.ruta" >
+          <mat-icon  matListItemIcon>{{lista.icono}}</mat-icon>
+          <a matListItemTitle>
+              {{ lista.nombre }}</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="contenido">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

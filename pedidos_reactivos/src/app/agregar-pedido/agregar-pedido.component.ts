@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ServicioPedidosService } from '../servicio-pedidos.service';
-import { Pedido } from '../_modelo/pedido';
-
 
 @Component({
   selector: 'app-agregar-pedido',
@@ -18,17 +16,13 @@ export class AgregarPedidoComponent {
   direccion:string=""
 
   constructor(private recoger:ActivatedRoute,private llevar:Router, public servicio:ServicioPedidosService){
-
       this.recoger.queryParams.subscribe(data => {this.finalizar = data['finalizar'];this.forma = data['forma'];this.direccion = data['direccion']})
       if(this.finalizar==undefined){
         this.finalizar=0
-
       }
-
   }
 
   ngOnInit(){
-
     this.formu = new FormGroup({
       forma: new FormControl(),
       direccion: new FormControl(),
@@ -36,13 +30,10 @@ export class AgregarPedidoComponent {
   }
 
   enviar(){
-
     if(this.finalizar==0){
       this.llevar.navigate(['detalles'],{queryParams:{forma:this.formu.value.forma,direccion:this.formu.value.direccion}})
-
     }
     else{
-
       this.servicio.altaDefinitiva(this.forma,this.direccion)
       this.finalizar=0
     }

@@ -15,11 +15,7 @@ export class AgregarDetallesComponent {
   forma:string=""
   direccion:string=""
 
-  constructor(private llevar:Router,private recoger:ActivatedRoute, public servicio:ServicioPedidosService){
-
-  }
-
-
+  constructor(private llevar:Router,private recoger:ActivatedRoute, public servicio:ServicioPedidosService){}
 
   ngOnInit(){
     this.recoger.queryParams.subscribe(data => {this.idPedido = data['idPedido'];this.forma = data['forma'];this.direccion = data['direccion']})
